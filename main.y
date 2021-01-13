@@ -60,9 +60,9 @@ program: statements
         root=new TreeNode(NODE_PROG);
         root->addChild($1);
         printf("\n\t.text\n\t.section\t.rodata\n");
-        ta.output();
+        ro_data.output();
         func_code.output();
-        printf("\t.sectro_daion\t.note.GNU-stack,\"\",@progbits\n\n");
+        printf("\t.section\t.note.GNU-stack,\"\",@progbits\n\n");
     }
     ;
 
